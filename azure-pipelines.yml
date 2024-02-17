@@ -30,5 +30,5 @@ steps:
     containerRegistryType: 'Azure Container Registry'
     azureSubscriptionEndpointForSecrets: 'Pay As You Go(c61095aa-0afd-4d68-922d-90796651f1a7)'
     azureContainerRegistry: 'gopalacr13.azurecr.io'
-    forceUpdate: false/app-depoy.yaml
+    forceUpdate: false
 
