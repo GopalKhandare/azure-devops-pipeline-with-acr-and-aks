@@ -16,7 +16,8 @@ steps:
       az acr login -n gopalacr13
       docker push gopalacr13.azurecr.io/web-game:tag 2048-game
 
-- script: cat - task: Kubernetes@1
+- script: cat 01_kubernetes_aks/app-deploy.yaml 
+- task: Kubernetes@1
   inputs:
     connectionType: 'Azure Resource Manager'
     azureSubscriptionEndpoint: 'Pay As You Go(c61095aa-0afd-4d68-922d-90796651f1a7)'
@@ -30,5 +31,5 @@ steps:
     containerRegistryType: 'Azure Container Registry'
     azureSubscriptionEndpointForSecrets: 'Pay As You Go(c61095aa-0afd-4d68-922d-90796651f1a7)'
     azureContainerRegistry: 'gopalacr13.azurecr.io'
-    forceUpdate: false
+    forceUpdate: false/app-deploy.yaml
 
